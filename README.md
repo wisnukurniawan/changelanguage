@@ -36,7 +36,7 @@ Language: *id*
 | 29 				| Indonesia | Indonesia           | PASSED |
 
 
-Language: th
+Language: *th*
 | android version | context  | applicationContext | status |
 | ----------------|----------|--------------------|--------|
 | 16 			  | Thailand | Thailand 		  | PASSED |
