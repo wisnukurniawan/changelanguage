@@ -19,6 +19,5 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "th"))
-//        super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "id"))
     }
 }

@@ -6,8 +6,7 @@ import android.content.Context
 class App : Application() {
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "th"))
-//        super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "id"))
+        super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "id"))
     }
 
 }
