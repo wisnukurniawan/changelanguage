@@ -6,7 +6,11 @@ import android.content.Context
 class App : Application() {
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "id"))
+        super.attachBaseContext(LocalizationUtil.applyLanguageContext(newBase, LANGUAGE))
+    }
+
+    companion object {
+        const val LANGUAGE = "th"
     }
 
 }

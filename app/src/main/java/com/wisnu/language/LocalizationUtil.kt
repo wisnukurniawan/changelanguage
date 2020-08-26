@@ -5,8 +5,8 @@ import android.os.Build
 import java.util.*
 
 object LocalizationUtil {
-
-    fun applyLanguage(context: Context, language: String?): Context {
+    @SuppressWarnings("Deprecated in Android 17")
+    fun applyLanguageContext(context: Context, language: String?): Context {
         try {
             val locale = Locale(language)
             val configuration = context.resources.configuration
@@ -30,5 +30,4 @@ object LocalizationUtil {
     private fun isAtLeastSdkVersion(versionCode: Int): Boolean {
         return Build.VERSION.SDK_INT >= versionCode
     }
-
 }
