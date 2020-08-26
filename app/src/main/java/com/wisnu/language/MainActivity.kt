@@ -1,6 +1,6 @@
 package com.wisnu.language
 
-import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,8 +16,12 @@ class MainActivity : AppCompatActivity() {
         tv_language2.text = applicationContext.getString(R.string.bahasa)
     }
 
-
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LocalizationUtil.applyLanguage(newBase, "th"))
+    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
+        super.applyOverrideConfiguration(
+            LocalizationUtil.updateConfigurationIfSupported(
+                overrideConfiguration,
+                App.LANGUAGE
+            )
+        )
     }
 }
