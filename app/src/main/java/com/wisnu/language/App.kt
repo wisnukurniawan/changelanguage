@@ -9,8 +9,13 @@ class App : Application() {
         super.attachBaseContext(LocalizationUtil.applyLanguageContext(newBase, LANGUAGE))
     }
 
+    override fun getApplicationContext(): Context {
+        val context = super.getApplicationContext()
+        return LocalizationUtil.applyLanguageApplicationContext(context, LANGUAGE)
+    }
+
     companion object {
-        const val LANGUAGE = "th"
+        var LANGUAGE = "en"
     }
 
 }

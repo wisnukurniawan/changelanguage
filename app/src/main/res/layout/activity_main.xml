@@ -1,26 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:layout_margin="30dp"
-  android:gravity="center_horizontal"
-  android:orientation="vertical"
-  tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-  <TextView
-    android:id="@+id/tv_language1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/bahasa"
-    android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_language1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bahasa"
+        android:textSize="16sp" />
 
-  <TextView
-    android:id="@+id/tv_language2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:text="@string/bahasa"
-    android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_language2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/bahasa"
+        android:textSize="16sp" />
 
+    <TextView
+        android:id="@+id/tv_language3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/bahasa"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="English" />
+
+    <Button
+        android:id="@+id/btn_indonesia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indonesia" />
+
+    <Button
+        android:id="@+id/btn_thailand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thailand" />
 </LinearLayout>
