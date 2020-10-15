@@ -19,14 +19,12 @@ LocalizationUtil.applyLanguageContext(newBase, LANGUAGE)
 ```kotlin
 tv_language1.text = getString(R.string.bahasa)
 tv_language2.text = applicationContext.getString(R.string.bahasa)
+tv_language3.text = resources.getString(R.string.bahasa)
 ```
 ### Test result
 Language: *id*
 | android version   | context   | applicationContext  | status |
 |-------------------|-----------|---------------------|--------|
-| 16 				| Indonesia | Indonesia 		  | PASSED |
-| 17 				| Indonesia | Indonesia           | PASSED |
-| 18 				| Indonesia | Indonesia           | PASSED |
 | 19 				| Indonesia | Indonesia           | PASSED |
 | 21 				| Indonesia | Indonesia           | PASSED |
 | 23 				| Indonesia | Indonesia           | PASSED |
@@ -39,9 +37,6 @@ Language: *id*
 Language: *th*
 | android version | context  | applicationContext | status |
 | ----------------|----------|--------------------|--------|
-| 16 			  | Thailand | Thailand 		  | PASSED |
-| 17 			  | Thailand | Thailand           | PASSED |
-| 18 			  | Thailand | Thailand           | PASSED |
 | 19 			  | Thailand | Thailand           | PASSED |
 | 21 			  | Thailand | Thailand           | PASSED |
 | 23 			  | Thailand | Thailand           | PASSED |
