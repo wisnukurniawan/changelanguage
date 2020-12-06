@@ -25,7 +25,6 @@ tv_language3.text = resources.getString(R.string.bahasa)
 Language: *id*
 | android version   | context   | applicationContext  | status |
 |-------------------|-----------|---------------------|--------|
-| 19 				| Indonesia | Indonesia           | PASSED |
 | 21 				| Indonesia | Indonesia           | PASSED |
 | 23 				| Indonesia | Indonesia           | PASSED |
 | 26 				| Indonesia | Indonesia           | PASSED |
@@ -37,7 +36,6 @@ Language: *id*
 Language: *th*
 | android version | context  | applicationContext | status |
 | ----------------|----------|--------------------|--------|
-| 19 			  | Thailand | Thailand           | PASSED |
 | 21 			  | Thailand | Thailand           | PASSED |
 | 23 			  | Thailand | Thailand           | PASSED |
 | 26 			  | Thailand | Thailand           | PASSED |
