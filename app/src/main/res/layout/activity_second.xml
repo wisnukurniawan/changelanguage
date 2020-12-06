@@ -40,27 +40,8 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/btn_english"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="English" />
-
-    <Button
-        android:id="@+id/btn_indonesia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Indonesia" />
-
-    <Button
-        android:id="@+id/btn_thailand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thailand" />
-
-    <Button
         android:id="@+id/launch"
-        android:text="Open second activity"
+        android:text="Open third activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

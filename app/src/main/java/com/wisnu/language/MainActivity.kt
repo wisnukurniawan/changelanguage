@@ -4,17 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.app.BaseContextWrappingDelegate
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private var baseContextWrappingDelegate: AppCompatDelegate? = null
-
-    override fun getDelegate() =
-        baseContextWrappingDelegate ?: BaseContextWrappingDelegate(super.getDelegate()).apply {
-            baseContextWrappingDelegate = this
-        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         btn_english.setOnClickListener { reloadActivity("en") }
         btn_indonesia.setOnClickListener { reloadActivity("id") }
         btn_thailand.setOnClickListener { reloadActivity("th") }
+
+        launch.setOnClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
+        }
     }
 
     private fun reloadActivity(lang: String) {
@@ -38,12 +35,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LocalizationUtil.applyLanguageContext(newBase, App.LANGUAGE))
+    override fun getBaseContext(): Context {
+        return LocalizationUtil.applyLanguageContext(super.getBaseContext(), Locale(App.LANGUAGE))
     }
 
     override fun getApplicationContext(): Context {
         val context = super.getApplicationContext()
-        return LocalizationUtil.applyLanguageApplicationContext(context, App.LANGUAGE)
+        return LocalizationUtil.applyLanguageContext(context, Locale(App.LANGUAGE))
     }
 }
