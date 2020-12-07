@@ -43,4 +43,8 @@ class MainActivity : AppCompatActivity() {
         val context = super.getApplicationContext()
         return LocalizationUtil.applyLanguageContext(context, Locale(App.LANGUAGE))
     }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocalizationUtil.applyLanguageContext(newBase, Locale(App.LANGUAGE)))
+    }
 }
